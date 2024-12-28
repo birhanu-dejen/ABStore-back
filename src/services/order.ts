@@ -209,7 +209,7 @@ export default class OrderService {
         email: user!.email,
         currency: "ETB",
         amount: totalPrice.toString(),
-        return_url:`https://abstoreuser.onrender.com/success/${tx_ref}`,
+        return_url:`https://mahid.onrender.com/success/${tx_ref}`,
         tx_ref: tx_ref,
       });
 
