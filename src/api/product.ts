@@ -1,7 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import { Request as JWTRequest } from "express-jwt";
 import express, { Request, Response } from "express";
-import path from "path";
 
 import ProductService from "../services/product";
 import handleValidationError from "../middleware/validation/handleError";
@@ -118,7 +117,7 @@ router.post(
     const images = files.map((e) => e.path);
 
     res.status(201).json({
-      data: {images},
+      data: { images },
       message: "Image uploaded successfully",
       error: [],
     });

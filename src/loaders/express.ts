@@ -14,8 +14,8 @@ import path from "path";
 export default async ({ app }: { app: Application }) => {
   app.use(cors());
   app.use(express.json());
-  const uploadsPath = path.join(__dirname, "../../uploads");
-  app.use("/uploads", express.static(uploadsPath));
+  const uploads = path.join(__dirname + "../../../");
+  app.use("/", express.static(uploads));
   app.use(bodyParser.urlencoded({ extended: true }));
 
   app.use("/users", userRoute);
