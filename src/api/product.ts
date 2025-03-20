@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { Request as JWTRequest } from "express-jwt";
 import express, { Request, Response } from "express";
+import path from "path";
 
 import ProductService from "../services/product";
 import handleValidationError from "../middleware/validation/handleError";
